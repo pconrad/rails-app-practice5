@@ -1,6 +1,11 @@
 <h3>User</h3>
 <p>Name: <%= @user.name if @user.name %></p>
 
+<p>@user_authenticated: <%= @user_authenticated  %></p>
+
+<p>is_member of UCSB-CS56-W15: <%= @is_member_w15 %></p>
+<p>is_member of UCSB-CS56-F16: <%= @is_member_f16 %></p>
+
 <p>@emails:</p> 
 
 <ul>
@@ -9,13 +14,14 @@
   <% end %>
 </ul>
 
-<p>@organizations:</p> 
+<p>@organizations: </p> 
 
 <ul>
   <% @organizations.each do |element| %>
   <li>organization: <%= element.to_json %></li>
   <% end %>
 </ul>
+
 
 
 
