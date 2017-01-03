@@ -9,11 +9,10 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
 
-    @octokit_client = Octokit::Client.new(:client_id => Rails.application.secrets.omniauth_provider_key,
-                                          :client_secret =>
-                                          Rails.application.secrets.omniauth_provider_secret)
-    
-    @github_user = @octokit_client.user 'pconrad'
+    @octokit_client = Octokit::Client.new(:access_token => session[:oauth_token])
+    @github_user = @octokit_client.user
+    @emails = @octokit_client.emails
+    @organizations = @octokit_client.organizations
     
   end
 

@@ -1,5 +1,22 @@
 <h3>User</h3>
 <p>Name: <%= @user.name if @user.name %></p>
 
-<p>@github_user: <%= @github_user.name if @github_user.name %></p>
+<p>@emails:</p> 
 
+<ul>
+  <% @emails.each do |element| %>
+  <li>email: <%= element.to_json %></li>
+  <% end %>
+</ul>
+
+<p>@organizations:</p> 
+
+<ul>
+  <% @organizations.each do |element| %>
+  <li>organization: <%= element.to_json %></li>
+  <% end %>
+</ul>
+
+
+
+<p>@github_user.to_json: <%= @github_user.to_json if @github_user%></p>
