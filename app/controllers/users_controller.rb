@@ -16,6 +16,11 @@ class UsersController < ApplicationController
     @emails = @octokit_client.emails
     @user_authenticated = @octokit_client.user_authenticated?
 
+
+    @octokit_machine = Octokit::Client.new(:access_token => Rails.application.secrets.machine_oauth_token)
+
+    @octokit_machine_login = @octokit_machine.user.login
+    
     @login = @octokit_client.user.login
     @is_member_f16 = @octokit_client.organization_member?('UCSB-CS56-F16',@login)
     @is_member_w15 = @octokit_client.organization_member?('UCSB-CS56-W15',@login)
