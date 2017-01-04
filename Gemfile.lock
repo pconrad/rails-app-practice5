@@ -47,6 +47,8 @@ GEM
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     bootstrap (4.0.0.alpha5)
       autoprefixer-rails (>= 6.0.3)
       sass (>= 3.4.19)
@@ -171,6 +173,9 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
+    roo (2.7.1)
+      nokogiri (~> 1)
+      rubyzip (~> 1.1, < 2.0.0)
     rspec-core (3.5.4)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
@@ -244,6 +249,7 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors
+  binding_of_caller
   bootstrap (~> 4.0.0.alpha3.1)
   byebug
   capybara
@@ -264,6 +270,7 @@ DEPENDENCIES
   puma (~> 3.0)
   rails (~> 5.0.1)
   rails_layout
+  roo
   rspec-rails
   sass-rails (~> 5.0)
   selenium-webdriver

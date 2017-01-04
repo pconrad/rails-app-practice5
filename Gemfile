@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+
 ruby '2.3.3'
 gem 'rails', '~> 5.0.1'
 gem 'puma', '~> 3.0'
@@ -43,3 +44,7 @@ group :test do
 end
 
 gem "octokit", "~> 4.0"
+
+gem 'roo'
+
+gem 'binding_of_caller'
